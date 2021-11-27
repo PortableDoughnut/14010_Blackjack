@@ -287,8 +287,8 @@ public class GamePanel extends JPanel {
 		int dealerTotal = jenny.getHand().getTotal(jenny.getHand().cards);
 		int playerTotal = sam.getHand().getTotal(sam.getHand().cards);
 		
-		if(((dealerTotal > playerTotal) && (dealerTotal < 22))) {
-			winOrLoss.setText("You Lost!\nI'm sorry, but the house always wins.");
+		if(((dealerTotal > playerTotal) && (dealerTotal < 22)) || (playerTotal > 21)) {
+			winOrLoss.setText("You Lost! \nI'm sorry, but the house always wins.");
 		} else if(((playerTotal > dealerTotal) && (playerTotal < 22)) || ((dealerTotal > 22) && (playerTotal < 22))) {
 			winOrLoss.setText("You Won! Congrats!");
 		} else {
