@@ -106,6 +106,12 @@ public class GamePanel extends JPanel {
 		Box horizontalBox = Box.createHorizontalBox();
 		optionsButton.add(horizontalBox);
 		
+		
+		for(int i = 0; i < 2; i++) {
+			onHit(playerBox, playerValueLabel, deck, sam, hitsDone);
+			hitsDone++;
+		}
+		
 		JButton hitButton = new JButton("Hit");
 		hitButton.setFont(new Font("Impact", Font.PLAIN, 16));
 		hitButton.addActionListener(new ActionListener() {
